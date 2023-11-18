@@ -1,6 +1,6 @@
 # Tetris
 
-Tetris in RxJS. [Play it here]().
+Tetris in RxJS. [Play it here](https://rx-tetris.pages.dev/).
 
 ## Controls
 
