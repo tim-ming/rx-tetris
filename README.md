@@ -1,7 +1,6 @@
 # Tetris
 
-Assignment 1 Submission for FIT2102 S2 2023.
-Created by Kok Tim Ming, 32619138.
+Tetris in RxJS. [Play it here]().
 
 ## Controls
 
