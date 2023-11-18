@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>FIT2102 A1 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="absolute top-0" id="title">TETRIS v2.102</h1>
+    <main id="main" class="flex col">
+      <div class="grid-cols-3 gap-4">
+        <div class="flex col-span-1 col items-end gap-4">
+          <div class="flex col" id="hold">
+            <span id="holdText">HOLD</span>
+            <svg id="svgHold"></svg>
+          </div>
+
+          <div class="flex col items-end" id="combo">
+            <span class="text-md">Combo </span>
+            <span id="comboText">...</span>
+          </div>
+
+          <div class="flex col items-end gap-4">
+            <div id="clearAction"></div>
+          </div>
+        </div>
+        <div class="flex-center col col-span-1 relative">
+          <div class="flex-center relative">
+            <svg id="svgCanvas"></svg>
+            <span
+              id="pausedOverlay"
+              class="flex-center col hidden absolute w-full h-full gap-4"
+            >
+              <p class="text-3xl">GAME PAUSED</p>
+              <div class="flex-center">
+                <kbd>P</kbd>
+                <p>to resume.</p>
+              </div></span
+            >
+            <!-- game over text box -->
+            <div id="gameOver" class="flex-center col hidden absolute">
+              <p>Game Over</p>
+              <div id="metrics">
+                <p id="metricScore"></p>
+                <p id="metricHighScore"></p>
+                <p id="metricMaxCombo"></p>
+                <p id="metricCurrentLevel"></p>
+                <p id="metricTimePlayed"></p>
+                <p id="metricPieces"></p>
+                <p id="metricPiecesPerMinute"></p>
+                <p id="metricLines"></p>
+                <p id="metricLinesPerMinute"></p>
+                <p id="metricHolds"></p>
+              </div>
+              <div id="gameOverInstructions" class="flex-center">
+                <kbd>R</kbd>
+                <p>to restart.</p>
+              </div>
+            </div>
+          </div>
+          <div class="text flex w-full">
+            <span id="scoreText"></span>
+          </div>
+        </div>
+        <div id="sideBar" class="flex col col-span-1 items-start">
+          <div class="flex col" id="next">
+            <span id="nextText">NEXT</span>
+            <svg id="svgPreview"></svg>
+          </div>
+          <div id="info" class="flex col">
+            <div class="flex items-center gap-4">
+              <span class="left">Level: </span>
+              <span class="right" id="levelText">...</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="left">Highscore: </span>
+              <span class="right" id="highScoreText">...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

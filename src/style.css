@@ -1,0 +1,318 @@
+BODY,
+p,
+H2,
+H3,
+H4,
+H5,
+H6,
+TH,
+TD {
+  font-family: "Chakra Petch", arial, helvetica, sans-serif;
+  margin: 0;
+}
+:root {
+  --primary-color: #1d2b36;
+  --primary-light-color: #263641;
+  --primary-dark-color: #182329;
+  --secondary-color: #382b45;
+  --secondary-light-color: #4b3759;
+  --secondary-dark-color: #2c1f37;
+  --accent-color: #524b65;
+  --accent-light-color: #645f79;
+  --accent-dark-color: #463f59;
+  --text-color: #fbfcfa;
+  --text-muted-color: #bdc3c7;
+  --text-accent-color: #f39c12;
+  background-color: var(--primary-dark-color);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+#title {
+  font-size: 3rem;
+  font-family: "Chakra Petch", arial, helvetica, sans-serif;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.flex {
+  display: flex;
+}
+.top-0 {
+  top: 0;
+}
+.text-sm {
+  font-size: 0.8rem;
+}
+.text-base {
+  font-size: 1rem;
+}
+.text-md {
+  font-size: 1.2rem;
+}
+.text-lg {
+  font-size: 1.4rem;
+}
+.text-xl {
+  font-size: 1.8rem;
+}
+.text-2xl {
+  font-size: 2.4rem;
+}
+.text-3xl {
+  font-size: 2.8rem;
+  line-height: 3rem;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.items-end {
+  align-items: end;
+}
+
+.items-start {
+  align-items: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+main {
+  background-color: var(--primary-light-color);
+  border-radius: 0.25em;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+svg {
+  border-radius: 2px;
+  border: 2px solid var(--accent-light-color);
+}
+
+svg rect {
+  stroke: rgb(60, 60, 60);
+  stroke-width: 2px;
+}
+
+#svgCanvas {
+  background-color: var(--primary-dark-color);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+#svgPreview {
+  background-color: var(--secondary-dark-color);
+}
+
+#metrics {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+#info {
+  width: 160px;
+  margin-top: 1em;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+#pausedOverlay {
+  text-align: center;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.05rem;
+  z-index: 99999999;
+}
+#levelText {
+  font-size: 2rem;
+}
+#scoreText {
+  font-size: 3rem;
+  letter-spacing: -0.25rem;
+  line-height: 1;
+}
+
+#comboText {
+  font-size: 4rem;
+  letter-spacing: -0.25rem;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--text-accent-color);
+}
+
+#hold {
+  padding: 0.4rem 0.8rem 1rem;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#holdText {
+  font-weight: 500;
+}
+
+#next {
+  padding: 0.4rem 0.8rem 1rem;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#combo {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.left {
+  font-size: 1.1em;
+  float: left;
+}
+
+.right {
+  font-size: 1em;
+  float: right;
+}
+
+#single {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #ffc36e;
+}
+
+#double {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1;
+  background-color: #f3ec78;
+  background-image: linear-gradient(90deg, #60c242, #21eb82);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: all 0.2s ease-out forwards;
+}
+
+#triple {
+  font-size: 2.5rem;
+  letter-spacing: -0.05rem;
+  font-weight: 600;
+  line-height: 1;
+  background-color: #f3ec78;
+  background-image: linear-gradient(90deg, #38ebff, #2eafff, #6378ff);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: all 0.2s ease-out forwards;
+}
+
+#tetris {
+  font-size: 3rem;
+  letter-spacing: -0.05rem;
+  font-weight: 600;
+  line-height: 1;
+  background: rgb(222, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 0, 1) 5%,
+    rgba(215, 103, 1, 1) 23%,
+    rgba(231, 207, 0, 1) 41%,
+    rgba(0, 217, 28, 1) 59%,
+    rgba(0, 212, 255, 1) 77%,
+    rgba(123, 0, 214, 1) 95%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+kbd {
+  font-weight: 500;
+  line-height: 1;
+  margin: 0 0.1rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+#gameOver {
+  color: black;
+  padding: 2rem;
+  border-radius: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  font-weight: 500;
+  gap: 0.5rem;
+  backdrop-filter: blur(6px);
+}
+
+#gameOverInstructions {
+  font-size: 0.8em;
+}
